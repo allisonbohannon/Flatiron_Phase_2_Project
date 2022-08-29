@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Route, Routes} from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home"
@@ -8,15 +8,24 @@ import Mains from "./Mains"
 import Desserts from "./Desserts"
 
 function App() {
+
+  const [recipeList, setRecipeList] = useState([])
+
+  useEffect(() => {
+      fetch("http://localhost:3000/recipes")
+          .then(resp => resp.json())
+          .then(data => setRecipeList(data))
+  }, [])
+
   return (
     <div >
      <NavBar />
      <Routes>
-        <Route path="/appetizers" element={<Appetizers />} />
-        <Route path="/sides" element={<Sides />} />
-        <Route path="/mains" element={<Mains />} />
-        <Route path="/desserts" element={<Desserts />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/appetizers" element={<Appetizers recipeList={recipeList}/>} />
+        <Route path="/sides" element={<Sides recipeList={recipeList}/>} />
+        <Route path="/mains" element={<Mains recipeList={recipeList}/>} />
+        <Route path="/desserts" element={<Desserts recipeList={recipeList}/>} />
+        <Route path="/" element={<Home recipeList={recipeList}/>} />
       </Routes>
     </div>
   );
