@@ -1,19 +1,18 @@
 {
-  "posts": [
+  "recipes": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": 1, 
+      "name": "mac and cheese", 
+      "type": "sides",
+      "ingredients": ["macaroni", "cheese"],
+      "instructions": ["melt cheese", "add mac"]
+    }, 
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2, 
+      "name": "fancy pudding", 
+      "type": "dessert",
+      "ingredients": ["pudding mix", "dark chocolate"],
+      "instructions": ["make pudding", "add in dark chocolate"]
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ] 
 }
