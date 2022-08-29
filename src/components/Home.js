@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
+import RecipeContainer from "./RecipeContainer";
 
-function Home() {
-  
+function Home({ recipeList }) {
  
     return (
         <div>
-            Home
+            Why don't you make something yummy
+            <RecipeContainer recipeList={recipeList} />
+         
         </div>
     )
 }
