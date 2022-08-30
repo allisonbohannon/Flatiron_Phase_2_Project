@@ -44,6 +44,13 @@ function NavBar() {
       >
         Desserts
       </NavLink>
+
+      <NavLink
+        to="/addnew"
+        style={linkStyles}
+      >
+        Add Something New!
+      </NavLink>
     </div>
   );
 }

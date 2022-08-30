@@ -6,6 +6,7 @@ import Appetizers from "./Appetizers"
 import Sides from "./Sides"
 import Mains from "./Mains"
 import Desserts from "./Desserts"
+import AddNew from "./AddNew";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/sides" element={<Sides recipeList={recipeList}/>} />
         <Route path="/mains" element={<Mains recipeList={recipeList}/>} />
         <Route path="/desserts" element={<Desserts recipeList={recipeList}/>} />
+        <Route path="/addnew" element={<AddNew />} />
         <Route path="/" element={<Home recipeList={recipeList}/>} />
       </Routes>
     </div>
