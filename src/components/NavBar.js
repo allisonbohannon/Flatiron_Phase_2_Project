@@ -21,13 +21,13 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink
-        to="/Appetizers"
+        to="/appetizers"
         style={linkStyles}
       >
         Appetizers
       </NavLink>
       <NavLink
-        to="/Sides"
+        to="/sides"
         style={linkStyles}
       >
         Sides

@@ -1,9 +1,11 @@
 import React from "react";
+import RecipeContainer from "./RecipeContainer";
 
-function Desserts() {
+function Desserts({recipeList}) {
     return (
         <div>
             Desserts
+            <RecipeContainer recipeList={recipeList} />
         </div>
     )
 }

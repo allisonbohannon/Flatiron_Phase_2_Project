@@ -6,7 +6,6 @@ function RecipeDetail({ recipe }) {
             Recipe Detail
         </div>
     )
-
 }
 
 export default RecipeDetail; 

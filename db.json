@@ -10,7 +10,7 @@
     {
       "id": 2, 
       "name": "fancy pudding", 
-      "type": "dessert",
+      "type": "desserts",
       "ingredients": ["pudding mix", "dark chocolate"],
       "instructions": ["make pudding", "add in dark chocolate"]
     }
