@@ -17,20 +17,57 @@ function AddNew() {
           });
     }
 
+    function handleSubmit(e) {
+        e.preventDefault(); 
+        const newRecipeObj= {
+            name:formData.name,
+            recipeType:formData.recipeType,
+            ingredients:formData.ingredients,
+            instructions:formData.instructions,
+        }
+        console.log(newRecipeObj)
+    }
+
     return (
         <div>
             What's Cookin Now?
-            <form>
-                <input type="text" placeholder="recipe name" onChange={handleChange} value={formData.name}></input> <br></br>
-                <select placeholder="recipe type" onChange={handleChange} value={formData.recipeType}>
+            <form className="form-group" onSubmit={handleSubmit}>
+                <input type="text" 
+                        name="name"
+                        className="form-control"  
+                        placeholder="recipe name" 
+                        onChange={handleChange} 
+                        value={formData.name}>
+                </input> 
+                        <br></br>
+                <select className="form-control" 
+                        name="recipeType"
+                        placeholder="recipe type" 
+                        onChange={handleChange} 
+                        value={formData.recipeType}>
                     <option value="appetizers">Appetizer</option>
                     <option value="sides">Side</option>
                     <option value="mains">Main</option>
                     <option value="desserts">Dessert</option>
-                </select> <br></br>
-                <input type="textarea" placeholder="ingredients" onChange={handleChange} value={formData.ingredients}/>  <br></br>
-                <input type="textarea" placeholder="instructions"onChange={handleChange} value={formData.instructions}/> <br></br>
-                <input type="submit" value="Submit"/>
+                </select> 
+                <br></br>
+                <input type="textarea"  
+                        className="form-control" 
+                        name="ingredients"
+                        placeholder="ingredients" 
+                        onChange={handleChange} 
+                        value={formData.ingredients}/> 
+                <br></br>
+                <input type="textarea"  
+                        className="form-control" 
+                        name="instructions"
+                        placeholder="instructions"
+                        onChange={handleChange} 
+                        value={formData.instructions}/> 
+                <br></br>
+                <input type="submit"  
+                        className="form-control" 
+                        value="Submit"/>
             </form>
         </div>
     )

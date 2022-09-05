@@ -8,9 +8,6 @@ function RecipeContainer({ recipeList }) {
 
    const filterType = location.pathname.slice(1).toLowerCase()
 
-   console.log(filterType)
-
-
    const displayRecipes = recipeList
    .filter(recipe => {
     return recipe.type === filterType; 
