@@ -13,7 +13,7 @@ function RecipeCard({ recipe }) {
     })
 
     return(
-        <div>
+        <div className="card">
             <h2>{name}</h2>
             <p>Ingredients</p>
             <ul>{displayIngredients}</ul>
