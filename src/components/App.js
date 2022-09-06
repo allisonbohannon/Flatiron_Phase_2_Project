@@ -18,6 +18,10 @@ function App() {
           .then(data => setRecipeList(data))
   }, [])
 
+  function onAdd(obj) {
+    setRecipeList([...recipeList, obj])
+  }
+
   return (
     <div >
      <NavBar />
@@ -26,7 +30,7 @@ function App() {
         <Route path="/sides" element={<Sides recipeList={recipeList}/>} />
         <Route path="/mains" element={<Mains recipeList={recipeList}/>} />
         <Route path="/desserts" element={<Desserts recipeList={recipeList}/>} />
-        <Route path="/addnew" element={<AddNew />} />
+        <Route path="/addnew" element={<AddNew handleAdd={onAdd} />} />
         <Route path="/" element={<Home recipeList={recipeList}/>} />
       </Routes>
     </div>

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function AddNew() {
+function AddNew({ handleAdd }) {
     const [formData, setFormData] = useState({
         name:"",
         recipeType:"",
@@ -25,7 +25,19 @@ function AddNew() {
             ingredients:formData.ingredients,
             instructions:formData.instructions,
         }
-        console.log(newRecipeObj)
+        fetch("http://localhost:3000/recipes", { method: "POST", 
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newRecipeObj)
+      })
+      .then(response => response.json())
+      .then(data => handleAdd(data))
+
+      setFormData({
+        name:"",
+        recipeType:"",
+        ingredients:"",
+        instructions:""
+      })
     }
 
     return (
