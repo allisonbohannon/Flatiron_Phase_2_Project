@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import RecipeCard from "./RecipeCard";
 
-function RecipeContainer({ recipeList }) {
+function RecipeContainer({ recipeList, setMatch, setRecipeId }) {
 
    const location = useLocation(); 
 
@@ -13,7 +13,7 @@ function RecipeContainer({ recipeList }) {
     return recipe.type === filterType; 
    })
    .map(recipe => {
-    return <RecipeCard key={recipe.id} recipe={recipe}/>
+    return <RecipeCard key={recipe.id} recipe={recipe} setMatch={setMatch} setRecipeId={setRecipeId}/>
     })
     
 

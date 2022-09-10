@@ -1,24 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function RecipeCard({ recipe }) {
+function RecipeCard({ recipe, setMatch, setRecipeId,}) {
 
-    const {name, ingredients, instructions} = recipe
+    const { name, type, ingredients, instructions, id } = recipe
 
-    const displayIngredients = ingredients.map(ingredient => {
-        return <li key={ingredient}>{ingredient}</li>
-    })
-
-    const displayInstructions = instructions.map(instruction => {
-        return <li key={instruction}>{instruction}</li>
-    })
+    function handleClick() {
+        setMatch(type)
+        setRecipeId(id)
+    }
 
     return(
-        <div className="card">
-            <h2>{name}</h2>
-            <p>Ingredients</p>
-            <ul>{displayIngredients}</ul>
-            <p>Instructions</p>
-            <ol>{displayInstructions}</ol>
+        <div className="card" onClick={handleClick}>
+            <h2><Link to={`/${type}/${id}`}>{name}</Link></h2>
         </div>
     )
 

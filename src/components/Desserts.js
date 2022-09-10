@@ -1,11 +1,11 @@
 import React from "react";
 import RecipeContainer from "./RecipeContainer";
 
-function Desserts({recipeList}) {
+function Desserts({recipeList, setMatch, setRecipeId}) {
     return (
         <div>
             Desserts
-            <RecipeContainer recipeList={recipeList} />
+            <RecipeContainer recipeList={recipeList} setMatch={setMatch} setRecipeId={setRecipeId} />
         </div>
     )
 }

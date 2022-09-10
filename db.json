@@ -1,18 +1,37 @@
 {
   "recipes": [
     {
-      "id": 1, 
-      "name": "mac and cheese", 
+      "id": 1,
+      "name": "mac and cheese",
       "type": "sides",
-      "ingredients": ["macaroni", "cheese"],
-      "instructions": ["melt cheese", "add mac"]
-    }, 
+      "ingredients": [
+        "macaroni",
+        "cheese"
+      ],
+      "instructions": [
+        "melt cheese",
+        "add mac"
+      ]
+    },
     {
-      "id": 2, 
-      "name": "fancy pudding", 
+      "id": 2,
+      "name": "fancy pudding",
       "type": "desserts",
-      "ingredients": ["pudding mix", "dark chocolate"],
-      "instructions": ["make pudding", "add in dark chocolate"]
+      "ingredients": [
+        "pudding mix",
+        "dark chocolate"
+      ],
+      "instructions": [
+        "make pudding",
+        "add in dark chocolate"
+      ]
+    },
+    {
+      "name": "Banana Pudding",
+      "type": "desserts",
+      "ingredients": ["bananas", "pudding "],
+      "instructions": ["Slice bananas", "put pudding on top "],
+      "id": 3
     }
-  ] 
+  ]
 }

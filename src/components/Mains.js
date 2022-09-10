@@ -1,11 +1,11 @@
 import React from "react";
 import RecipeContainer from "./RecipeContainer";
 
-function Mains({recipeList}) {
+function Mains({recipeList, setMatch, setRecipeId}) {
     return (
         <div>
             Mains
-            <RecipeContainer recipeList={recipeList} />
+            <RecipeContainer recipeList={recipeList} setMatch={setMatch} setRecipeId={setRecipeId} />
         </div>
     )
 }
