@@ -1,10 +1,12 @@
 import React from "react";
 import { useParams, useLocation} from "react-router"
+import { useHistory } from "react-router-dom";
 
 function RecipeDetail({ recipeList, handleDelete }) {
 
    // const { displayType } = useLocation()
     const { recipeId }  = useParams(); 
+    const history = useHistory();
 
 
     const recipe = recipeList.filter(recipe => {
@@ -23,13 +25,14 @@ function RecipeDetail({ recipeList, handleDelete }) {
         return <li key={instruction}>{instruction}</li>
     })
 
-    function handleDelete() {
+    function handleDeleteRecipe() {
         fetch(`http://localhost:3000/recipes/${id}`, {method: 'DELETE'})
         .then(response => response.json())
-        .then(console.log("delete!"))
+        .then(handleDelete(id))
+        history.push('/${type}');
     }
 
-    function handleEdit() {
+    function handleEditRecipe() {
         console.log("edit!")
     }
 
@@ -43,8 +46,8 @@ function RecipeDetail({ recipeList, handleDelete }) {
             <p>Instructions</p>
             <ol>{displayInstructions}</ol>
             <span>
-                <button onClick={handleEdit}>Edit</button>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleEditRecipe}>Edit</button>
+                <button onClick={handleDeleteRecipe}>Delete</button>
             </span>
         </div>
     )
