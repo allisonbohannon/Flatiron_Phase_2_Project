@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useLocation} from "react-router"
 
-function RecipeDetail({ recipeList }) {
+function RecipeDetail({ recipeList, handleDelete }) {
 
    // const { displayType } = useLocation()
     const { recipeId }  = useParams(); 
@@ -12,10 +12,8 @@ function RecipeDetail({ recipeList }) {
     })
 
 
-
     const { name, type, ingredients, instructions, id } = recipe[0]
 
-    console.log(typeof ingredients)
 
     const displayIngredients = ingredients.map(ingredient => {
         return <li key={ingredient}>{ingredient}</li>
@@ -24,6 +22,16 @@ function RecipeDetail({ recipeList }) {
     const displayInstructions = instructions.map(instruction => {
         return <li key={instruction}>{instruction}</li>
     })
+
+    function handleDelete() {
+        fetch(`http://localhost:3000/recipes/${id}`, {method: 'DELETE'})
+        .then(response => response.json())
+        .then(console.log("delete!"))
+    }
+
+    function handleEdit() {
+        console.log("edit!")
+    }
 
     
 
@@ -34,6 +42,10 @@ function RecipeDetail({ recipeList }) {
             <ul>{displayIngredients}</ul>
             <p>Instructions</p>
             <ol>{displayInstructions}</ol>
+            <span>
+                <button onClick={handleEdit}>Edit</button>
+                <button onClick={handleDelete}>Delete</button>
+            </span>
         </div>
     )
 }
