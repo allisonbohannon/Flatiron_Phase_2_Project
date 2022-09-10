@@ -25,6 +25,14 @@ function App() {
     setRecipeList([...recipeList, obj])
   }
 
+  function onDelete(id) {
+    const updatedRecipeList= recipeList.filter(recipe => {
+      return (!recipe.id === id)
+    })
+
+    setRecipeList(updatedRecipeList)
+  }
+
 
   return (
     <div >
@@ -62,6 +70,8 @@ function App() {
             />} />
         <Route path={`${match}/:recipeId`} element={<RecipeDetail 
             recipeList={recipeList}
+            handleDelete={onDelete}
+            handleEdit={onEdit}
             />}/>
         <Route path="/" element={<Home recipeList={recipeList}/>} />
       </Routes>
