@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
 
 function AddNew({ handleAdd }) {
 
@@ -42,18 +45,17 @@ function AddNew({ handleAdd }) {
     }
 
     return (
-        <div>
+        <Container>
             What's Cookin Now?
-            <form className="form-group" onSubmit={handleSubmit}>
-                <input type="text" 
-                        name="name"
-                        className="form-control"  
+            <Form className="mb-3" onSubmit={handleSubmit}>
+                <Form.Control type="text" 
+                        name="name" 
                         placeholder="recipe name" 
                         onChange={handleChange} 
                         value={formData.name}>
-                </input> 
+                </Form.Control> 
                         <br></br>
-                <select className="form-control" 
+                <Form.Select 
                         name="recipeType"
                         placeholder="recipe type" 
                         onChange={handleChange} 
@@ -62,27 +64,25 @@ function AddNew({ handleAdd }) {
                     <option value="sides">Side</option>
                     <option value="mains">Main</option>
                     <option value="desserts">Dessert</option>
-                </select> 
+                </Form.Select> 
                 <br></br>
-                <input type="textarea"  
-                        className="form-control" 
+                <Form.Control as="textarea"  
                         name="ingredients"
+                        rows={5} 
                         placeholder="ingredients" 
                         onChange={handleChange} 
                         value={formData.ingredients}/> 
                 <br></br>
-                <input type="textarea"  
-                        className="form-control" 
+                <Form.Control as="textarea"  
                         name="instructions"
+                        rows={5} 
                         placeholder="instructions"
                         onChange={handleChange} 
                         value={formData.instructions}/> 
                 <br></br>
-                <input type="submit"  
-                        className="form-control" 
-                        value="Submit"/>
-            </form>
-        </div>
+                <Button type="submit">Submit</Button>
+            </Form>
+        </Container>
     )
 }
 
