@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Route, Routes} from "react-router-dom";
-import NavBar from "./NavBar";
+import NavigationBar from "./NavigationBar";
 import Home from "./Home"
 import Appetizers from "./Appetizers"
 import Sides from "./Sides"
@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div >
-     <NavBar />
+     <NavigationBar />
      <Routes>
         <Route path="/appetizers" element={<Appetizers 
             recipeList={recipeList}
