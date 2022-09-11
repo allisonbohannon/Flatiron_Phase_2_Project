@@ -15,6 +15,8 @@ function RecipeContainer({ recipeList, setMatch, setRecipeId }) {
    .map(recipe => {
     return <RecipeCard key={recipe.id} recipe={recipe} setMatch={setMatch} setRecipeId={setRecipeId}/>
     })
+
+    console.log(displayRecipes)
     
 
     return(
