@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams, useLocation} from "react-router"
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function RecipeDetail({ recipeList, handleDelete }) {
 
    // const { displayType } = useLocation()
     const { recipeId }  = useParams(); 
-    const history = useHistory();
+    const navigate = useNavigate();
 
 
     const recipe = recipeList.filter(recipe => {
@@ -29,11 +29,11 @@ function RecipeDetail({ recipeList, handleDelete }) {
         fetch(`http://localhost:3000/recipes/${id}`, {method: 'DELETE'})
         .then(response => response.json())
         .then(handleDelete(id))
-        history.push('/${type}');
+        navigate(-1);
     }
 
     function handleEditRecipe() {
-        console.log("edit!")
+        navigate(`/${type}/${id}/edit`)
     }
 
     

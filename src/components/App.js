@@ -8,6 +8,7 @@ import Mains from "./Mains"
 import Desserts from "./Desserts"
 import AddNew from "./AddNew";
 import RecipeDetail from "./RecipeDetail";
+import EditForm from "./EditForm";
 
 function App() {
 
@@ -31,6 +32,10 @@ function App() {
     })
 
     setRecipeList(updatedRecipeList)
+  }
+
+  function onEdit(obj) {
+    console.log(obj)
   }
 
 
@@ -73,7 +78,11 @@ function App() {
             handleDelete={onDelete}
             handleEdit={onEdit}
             />}/>
-        <Route path="/" element={<Home recipeList={recipeList}/>} />
+        <Route path={`${match}/${recipeId}/edit`} element={<EditForm 
+            recipeList={recipeList}
+            handleEdit={onEdit}
+            />}/>
+          <Route path="/" element={<Home recipeList={recipeList}/>} />
       </Routes>
     </div>
   );
