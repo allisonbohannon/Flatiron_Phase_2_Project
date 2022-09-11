@@ -1,8 +1,16 @@
 import React, {useState} from "react";
-import { useParams} from "react-router"
+import { useNavigate } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
+
 
 
 function EditForm({ handleEdit, recipeList, recipeId }) {
+
+    const navigate = useNavigate()
 
     const recipe = recipeList.find(recipe => {
         return recipe.id === recipeId
@@ -39,23 +47,25 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
         fetch(`http://localhost:3000/recipes/${id}`, { method: "PATCH", 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newRecipeObj)
-      })
-      .then(response => response.json())
-      .then(data => handleEdit(data))
+         })
+         .then(response => response.json())
+         .then(data => handleEdit(data))
+
+         navigate(-1)
     }
 
     return (
-        <div>
+        <Container>
             What's Cookin Now?
-            <form className="form-group" onSubmit={handleSubmit}>
-                <input type="text" 
+            <Form className="mb-3" onSubmit={handleSubmit}>
+                <Form.Control type="text" 
                         name="name"
                         className="form-control"  
                         onChange={handleChange} 
                         value={formData.name}>
-                </input> 
+                </Form.Control> 
                         <br></br>
-                <select className="form-control" 
+                <Form.Select className="form-control" 
                         name="recipeType"
                         onChange={handleChange} 
                         value={formData.recipeType}>
@@ -63,25 +73,29 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
                     <option value="sides">Side</option>
                     <option value="mains">Main</option>
                     <option value="desserts">Dessert</option>
-                </select> 
+                </Form.Select> 
                 <br></br>
-                <input type="textarea"  
+                <Form.Control as="textarea" 
+                        rows={5}
                         className="form-control" 
                         name="ingredients"
                         onChange={handleChange} 
                         value={formData.ingredients}/> 
+                <p><em>Separate instructions with a ","</em></p>
                 <br></br>
-                <input type="textarea"  
+                <Form.Control as="textarea" 
+                        rows={5} 
                         className="form-control" 
                         name="instructions"
                         onChange={handleChange} 
-                        value={formData.instructions}/> 
+                        value={formData.instructions}/>
+                <p><em>Separate instructions with a ","</em></p>      
                 <br></br>
-                <input type="submit"  
-                        className="form-control" 
-                        value="Submit"/>
-            </form>
-        </div>
+              
+                <Button type="submit">Submit</Button>
+                        
+            </Form>
+        </Container>
     )
 }
 
