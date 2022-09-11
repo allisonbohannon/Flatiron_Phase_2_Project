@@ -72,6 +72,7 @@ function AddNew({ handleAdd }) {
                         placeholder="ingredients" 
                         onChange={handleChange} 
                         value={formData.ingredients}/> 
+                <p><em>Separate ingredients with a ","</em></p>  
                 <br></br>
                 <Form.Control as="textarea"  
                         name="instructions"
@@ -79,6 +80,7 @@ function AddNew({ handleAdd }) {
                         placeholder="instructions"
                         onChange={handleChange} 
                         value={formData.instructions}/> 
+                <p><em>Separate instructions with a ","</em></p>  
                 <br></br>
                 <Button type="submit">Submit</Button>
             </Form>

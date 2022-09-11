@@ -54,16 +54,14 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
 
     return (
         <Container>
-            What's Cookin Now?
             <Form className="mb-3" onSubmit={handleSubmit}>
                 <Form.Control type="text" 
                         name="name"
-                        className="form-control"  
                         onChange={handleChange} 
                         value={formData.name}>
                 </Form.Control> 
                         <br></br>
-                <Form.Select className="form-control" 
+                <Form.Select 
                         name="recipeType"
                         onChange={handleChange} 
                         value={formData.recipeType}>
@@ -75,15 +73,13 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
                 <br></br>
                 <Form.Control as="textarea" 
                         rows={5}
-                        className="form-control" 
                         name="ingredients"
                         onChange={handleChange} 
                         value={formData.ingredients}/> 
-                <p><em>Separate instructions with a ","</em></p>
+                <p><em>Separate ingredients with a ","</em></p>
                 <br></br>
                 <Form.Control as="textarea" 
                         rows={5} 
-                        className="form-control" 
                         name="instructions"
                         onChange={handleChange} 
                         value={formData.instructions}/>
