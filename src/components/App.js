@@ -80,6 +80,7 @@ function App() {
             />}/>
         <Route path={`${match}/${recipeId}/edit`} element={<EditForm 
             recipeList={recipeList}
+            recipeId={recipeId}
             handleEdit={onEdit}
             />}/>
           <Route path="/" element={<Home recipeList={recipeList}/>} />
