@@ -34,8 +34,14 @@ function App() {
     setRecipeList(updatedRecipeList)
   }
 
-  function onEdit(obj) {
-    console.log(obj)
+  function onEdit(newRecipe) {
+    const updatedRecipeList= recipeList.map(recipe => {
+      if (recipe.id === newRecipe.id) { 
+        return newRecipe
+      } else {
+        return recipe}
+      }
+    })
   }
 
 
