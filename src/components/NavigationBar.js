@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function NavigationBar() {
   return (
     <Navbar  bg="light">
-        <Nav  bsstyle="pills" justified="true" >
+        <Nav >
           <Nav.Item>
             <Nav.Link 
               as={Link}
