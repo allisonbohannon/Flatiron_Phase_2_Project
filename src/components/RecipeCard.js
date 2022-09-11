@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+
+
 
 function RecipeCard({ recipe, setMatch, setRecipeId,}) {
 
@@ -11,9 +14,10 @@ function RecipeCard({ recipe, setMatch, setRecipeId,}) {
     }
 
     return(
-        <div className="card" onClick={handleClick}>
+        <Card onClick={handleClick}
+        style={{ margin: '2rem' }} >
             <h2><Link to={`/${type}/${id}`}>{name}</Link></h2>
-        </div>
+        </Card>
     )
 
 }; 

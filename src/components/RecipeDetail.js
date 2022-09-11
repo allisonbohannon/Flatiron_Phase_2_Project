@@ -1,20 +1,20 @@
 import React from "react";
-import { useParams, useLocation} from "react-router"
+import { useParams} from "react-router"
 import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 function RecipeDetail({ recipeList, handleDelete }) {
 
-   // const { displayType } = useLocation()
     const { recipeId }  = useParams(); 
     const navigate = useNavigate();
 
 
-    const recipe = recipeList.filter(recipe => {
+    const recipe = recipeList.find(recipe => {
         return recipe.id === parseInt(recipeId)
     })
 
 
-    const { name, type, ingredients, instructions, id } = recipe[0]
+    const { name, type, ingredients, instructions, id } = recipe
 
 
     const displayIngredients = ingredients.map(ingredient => {
@@ -26,7 +26,7 @@ function RecipeDetail({ recipeList, handleDelete }) {
     })
 
     function handleDeleteRecipe() {
-        fetch(`http://localhost:3000/recipes/${id}`, {method: 'DELETE'})
+        fetch(`${process.env.REACT_APP_API_URL}/recipes/${id}`, {method: 'DELETE'})
         .then(response => response.json())
         .then(handleDelete(id))
         navigate(-1);
@@ -46,8 +46,8 @@ function RecipeDetail({ recipeList, handleDelete }) {
             <p>Instructions</p>
             <ol>{displayInstructions}</ol>
             <span>
-                <button onClick={handleEditRecipe}>Edit</button>
-                <button onClick={handleDeleteRecipe}>Delete</button>
+                <Button onClick={handleEditRecipe}>Edit</Button>
+                <Button onClick={handleDeleteRecipe}>Delete</Button>
             </span>
         </div>
     )

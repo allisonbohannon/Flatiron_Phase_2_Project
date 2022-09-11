@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 
 function AddNew({ handleAdd }) {
+
     const [formData, setFormData] = useState({
         name:"",
-        recipeType:"",
+        recipeType:"appetizers",
         ingredients:"",
         instructions:""
     })
@@ -21,11 +22,11 @@ function AddNew({ handleAdd }) {
         e.preventDefault(); 
         const newRecipeObj= {
             name:formData.name,
-            recipeType:formData.recipeType,
-            ingredients:formData.ingredients,
-            instructions:formData.instructions,
+            type:formData.recipeType,
+            ingredients:formData.ingredients.split(", "),
+            instructions:formData.instructions.split(", "),
         }
-        fetch("http://localhost:3000/recipes", { method: "POST", 
+        fetch(`${process.env.REACT_APP_API_URL}/recipes`, { method: "POST", 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newRecipeObj)
       })

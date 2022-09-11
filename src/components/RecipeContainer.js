@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import RecipeCard from "./RecipeCard";
+import Container from 'react-bootstrap/Container';
 
 function RecipeContainer({ recipeList, setMatch, setRecipeId }) {
 
@@ -15,14 +16,12 @@ function RecipeContainer({ recipeList, setMatch, setRecipeId }) {
    .map(recipe => {
     return <RecipeCard key={recipe.id} recipe={recipe} setMatch={setMatch} setRecipeId={setRecipeId}/>
     })
-
-    console.log(displayRecipes)
     
 
     return(
-        <div>
+        <Container>
            {displayRecipes}
-        </div>
+        </Container>
     )
 
 }; 

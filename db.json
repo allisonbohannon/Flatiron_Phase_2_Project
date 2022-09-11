@@ -29,9 +29,43 @@
     {
       "name": "Banana Pudding",
       "type": "desserts",
-      "ingredients": ["bananas", "pudding "],
-      "instructions": ["Slice bananas", "put pudding on top "],
+      "ingredients": [
+        "bananas",
+        "pudding "
+      ],
+      "instructions": [
+        "Slice bananas",
+        "put pudding on top "
+      ],
       "id": 3
+    },
+    {
+      "name": "Buttered Toast",
+      "type": "mains",
+      "ingredients": [
+        "butter",
+        " toast"
+      ],
+      "instructions": [
+        "toast bread",
+        " smother in butter"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Bread and Oil",
+      "type": "appetizers",
+      "ingredients": [
+        "bread",
+        " olive oil",
+        " balsamic vinegar"
+      ],
+      "instructions": [
+        "pour balsamic vinegar into dish of olive oil",
+        " sprinkle salt onto mixture",
+        " dip bread into mixture"
+      ],
+      "id": 5
     }
   ]
 }

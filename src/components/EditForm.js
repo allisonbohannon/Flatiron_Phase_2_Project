@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 
@@ -44,7 +42,7 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
             ingredients:formData.ingredients.split(", "),
             instructions:formData.instructions.split(", "),
         }
-        fetch(`http://localhost:3000/recipes/${id}`, { method: "PATCH", 
+        fetch(`${process.env.REACT_APP_API_URL}/recipes/${id}`, { method: "PATCH", 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newRecipeObj)
          })

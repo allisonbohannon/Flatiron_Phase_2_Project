@@ -16,8 +16,9 @@ function App() {
   const [match, setMatch] = useState({})
   const [recipeId, setRecipeId] = useState(''); 
 
+
   useEffect(() => {
-      fetch("http://localhost:3000/recipes")
+      fetch(`${process.env.REACT_APP_API_URL}/recipes`)
           .then(resp => resp.json())
           .then(data => setRecipeList(data))
   }, [])
@@ -37,11 +38,12 @@ function App() {
   function onEdit(newRecipe) {
     const updatedRecipeList= recipeList.map(recipe => {
       if (recipe.id === newRecipe.id) { 
+        console.log('Updating')
         return newRecipe
       } else {
         return recipe}
       }
-    })
+    )
   }
 
 

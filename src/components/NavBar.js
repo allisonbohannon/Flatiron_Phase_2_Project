@@ -1,54 +1,58 @@
 import React from "react"
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
-import { LinkContainer } from 'react-router-bootstrap'
-import Button from "react-bootstrap/esm/Button";
 
 
 function NavBar() {
   return (
-    <Nav  justify variant="tabs" className="">
+    <Nav  justify variant="tabs"  className="">
       <Nav.Item>
-        <LinkContainer 
+        <Nav.Link 
+          as={Link}
           to="/"
         >
-          <Button>Home</Button>
-        </LinkContainer>
+          Home
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <LinkContainer
+        <Nav.Link
+          as={Link}
           to="/appetizers"
         >
-          <Button>Appetizers</Button>
-        </LinkContainer>
+          Appetizers
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <LinkContainer
+        <Nav.Link
+          as={Link}
           to="/sides"
         >
-          <Button>Sides</Button>
-        </LinkContainer>
+          Sides
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <LinkContainer
+        <Nav.Link
+          as={Link}
           to="/mains"
         >
-          <Button>Mains</Button>
-        </LinkContainer>
+          Mains
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <LinkContainer
+        <Nav.Link
+          as={Link}
           to="/desserts"
         >
-          <Button>Desserts</Button>
-        </LinkContainer>
+          Desserts
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <LinkContainer
+        <Nav.Link
+          as={Link}
           to="/addnew"
         >
-          <Button>Add Something New!</Button>
-        </LinkContainer>
+          Add Something New!
+        </Nav.Link>
       </Nav.Item>
     </Nav>
   );
