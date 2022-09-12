@@ -19,7 +19,7 @@ function Home({ recipeList, setMatch, setRecipeId, }) {
             <Button onClick={handleClick}
                 style={{margin: '2em'}}
                 
-                >Need ideas? </Button>
+                >{toggle? "Show Less": "Need Ideas?"}</Button>
             {toggle? <RandomRecipes recipeList={recipeList} setMatch={setMatch} setRecipeId={setRecipeId}/> : ""}
         </Container>
     )

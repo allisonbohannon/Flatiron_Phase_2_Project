@@ -88,6 +88,73 @@
         " Bake until the edges start to brown but are not burnt, 20 to 30 minutes."
       ],
       "id": 9
+    },
+    {
+      "name": "Bacon Wrapped Shrimp",
+      "type": "appetizers",
+      "imgurl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9174500.jpg&w=1200&h=678&c=sc&poi=face&q=60&orient=true",
+      "ingredients": [
+        "16 jumbo Shrimp, fresh, raw, jumbo (11-15)",
+        " ¾ teaspoon Cajun seasoning",
+        " 8 strips thin sliced bacon, cut in half",
+        " 16 toothpicks",
+        " 2 tablespoons hot honey"
+      ],
+      "instructions": [
+        "Place shrimp on a plate and sprinkle both sides with Cajun seasoning. Wrap each shrimp with 1 narrow strip of bacon and fasten with a toothpick. Refrigerate for 25 to 30 minutes.",
+        " Preheat the air fryer to 400 degrees F (200 degrees C).",
+        " Air-fry shrimp for 3 minutes. Flip and continue cooking until bacon is lightly crispy, 4 to 5 minutes more. You may have to do 2 batches depending on the size of your air fryer.",
+        " Remove shrimp to a plate and drizzle with hot honey. Serve immediately, being watchful of any toothpicks."
+      ],
+      "id": 10
+    },
+    {
+      "name": "Caprese Salad",
+      "type": "sides",
+      "imgurl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fpublic-assets.meredithcorp.io%2F05ecbd70fe0b397c94399e177a5b0324%2F1660283011BEC5DE74-38CF-4EDD-A170-DB00D4DAE4AA.jpeg&w=1200&h=678&c=sc&poi=face&q=60&orient=true",
+      "ingredients": [
+        "3 large heirloom tomatoes, sliced, or to taste",
+        " 1 (16 ounce) package fresh mozzarella cheese, sliced",
+        " ½ cup fresh basil leaves",
+        " 3 tablespoons extra-virgin olive oil",
+        " 1 pinch salt and ground black pepper to taste"
+      ],
+      "instructions": [
+        "Arrange tomato slices, mozzarella slices, and basil leaves on a serving plate, alternating between them.",
+        " Drizzle with olive oil and sprinkle with salt and pepper"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Pork Chops",
+      "type": "mains",
+      "imgurl": "https://www.inspiredtaste.net/wp-content/uploads/2018/08/Juicy-Pork-Chops-Recipe-1-1200.jpg",
+      "ingredients": [
+        "4 pork chops, about 1-inch thick and 6 to 7 ounces each",
+        " 1 tablespoon all-purpose flour",
+        " 1 teaspoon chili powder, see our homemade chili powder recipe",
+        " 1 teaspoon garlic powder",
+        " 1 teaspoon onion powder",
+        " 1/2 teaspoon smoked paprika",
+        " 1/2 teaspoon ground black pepper",
+        " 1 tablespoon neutral oil like avocado oil or vegetable oil",
+        " 1 cup low-sodium chicken stock, see our homemade chicken stock recipe",
+        " 1 tablespoon apple cider vinegar",
+        " 2 teaspoons honey or brown sugar",
+        " 1 tablespoon butter",
+        " 2 tablespoons chopped fresh parsley, optional"
+      ],
+      "instructions": [
+        "Take the pork chops out of the refrigerator and season on both sides with salt — we use just less than 1/4 teaspoon of fine salt per pork chop. Set the chops aside to rest for 30 minutes.",
+        " Meanwhile, make the spice rub. In a small bowl, mix the flour, chili powder, garlic powder, onion powder, smoked paprika, and 1/2 teaspoon of black pepper.",
+        " After 30 minutes, use a paper towel to pat the pork chops dry, then rub both sides of the chops with the spice rub.",
+        " Heat the oil in a skillet (with a lid) over medium-high heat. When the oil is hot and looks shimmery, add the pork. Cook until golden, 2 to 3 minutes.",
+        " Flip the pork so that the seared side is facing up. If there is a fattier side of the pork, use kitchen tongs to hold the chops, fat-side-down until it sizzles and browns slightly",
+        " about 30 seconds.",
+        " Reduce the heat to low, then cover the skillet with a lid. Cook 6 to 12 minutes or until an instant-read thermometer reads 145° F when inserted into the thickest part of the chop. Cook time depends on the thickness of the chops, so check for doneness at 5 minutes, then go from there, checking every 2 minutes after that. If you do not have a thermometer, you will know they are done, if, when cutting into the chops, the juices run clear.",
+        " Transfer pork chops to a plate, then cover loosely with aluminum foil. Let the pork rest for 5 minutes."
+      ],
+      "id": 12
     }
   ]
 }
