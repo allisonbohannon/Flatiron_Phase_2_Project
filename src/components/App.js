@@ -28,10 +28,11 @@ function App() {
   }
 
   function onDelete(id) {
+   
     const updatedRecipeList= recipeList.filter(recipe => {
-      return (!recipe.id === id)
+      return (recipe.id !== id)
     })
-
+    
     setRecipeList(updatedRecipeList)
   }
 
@@ -44,6 +45,7 @@ function App() {
         return recipe}
       }
     )
+    setRecipeList(updatedRecipeList)
   }
 
 

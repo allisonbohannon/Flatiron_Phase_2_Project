@@ -28,8 +28,8 @@ function AddNew({ handleAdd }) {
             name:formData.name,
             type:formData.recipeType,
             imgurl:formData.imgurl,
-            ingredients:formData.ingredients.split(", "),
-            instructions:formData.instructions.split(", "),
+            ingredients:formData.ingredients.split(";"),
+            instructions:formData.instructions.split(";"),
         }
         fetch(`${process.env.REACT_APP_API_URL}/recipes`, { method: "POST", 
         headers: { "Content-Type": "application/json" },
@@ -82,7 +82,7 @@ function AddNew({ handleAdd }) {
                         placeholder="ingredients" 
                         onChange={handleChange} 
                         value={formData.ingredients}/> 
-                <p><em>Separate ingredients with a ","</em></p>  
+                <p><em>Separate ingredients with a ";"</em></p>  
                 <br></br>
                 <Form.Control as="textarea"  
                         name="instructions"
@@ -90,7 +90,7 @@ function AddNew({ handleAdd }) {
                         placeholder="instructions"
                         onChange={handleChange} 
                         value={formData.instructions}/> 
-                <p><em>Separate instructions with a ","</em></p>  
+                <p><em>Separate instructions with a ";"</em></p>  
                 <br></br>
                 <Button type="submit">Submit</Button>
             </Form>

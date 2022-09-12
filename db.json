@@ -1,71 +1,93 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "name": "mac and cheese",
-      "type": "sides",
-      "ingredients": [
-        "macaroni",
-        "cheese"
-      ],
-      "instructions": [
-        "melt cheese",
-        "add mac"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "fancy pudding",
+      "name": "Pumpkin Chocolate Chip Muffins",
       "type": "desserts",
+      "imgurl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9343331.jpg&w=1200&h=678&c=sc&poi=face&q=60&orient=true",
       "ingredients": [
-        "pudding mix",
-        "dark chocolate"
+        "¾ cup white sugar",
+        "¼ cup vegetable oil",
+        "2 large eggs",
+        "¾ cup canned pumpkin",
+        "¼ cup water",
+        "1 ½ cups all-purpose flour",
+        " ¾ teaspoon baking powder",
+        "½ teaspoon baking soda",
+        "½ teaspoon ground cinnamon",
+        "¼ teaspoon ground nutmeg",
+        "¼ teaspoon ground cloves",
+        "¼ teaspoon salt",
+        "½ cup semisweet chocolate chips;"
       ],
       "instructions": [
-        "make pudding",
-        "add in dark chocolate"
-      ]
+        "Preheat the oven to 400 degrees F (200 degrees C). Grease and flour muffin pan or use paper liners.",
+        "Whisk sugar, oil, and eggs together in a medium bowl. Stir in pumpkin and water until well blended.",
+        "Mix together flour, baking powder, baking soda, cinnamon, nutmeg, cloves, and salt in a separate bowl.",
+        "Add the wet ingredients into the dry ingredients and stir just to combine, being careful not to overmix. Gently stir in chocolate chips.",
+        "Fill muffin cups 2/3 full with batter. Bake in the preheated oven until a toothpick inserted into the center comes out clean, 20 to 25 minutes.;"
+      ],
+      "id": 6
     },
     {
-      "name": "Banana Pudding",
-      "type": "desserts",
-      "ingredients": [
-        "bananas",
-        "pudding "
-      ],
-      "instructions": [
-        "Slice bananas",
-        "put pudding on top "
-      ],
-      "id": 3
-    },
-    {
-      "name": "Buttered Toast",
+      "name": "Lemon Panko Salmon",
       "type": "mains",
+      "imgurl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6312813.jpg&w=1200&h=678&c=sc&poi=face&q=60&orient=true",
       "ingredients": [
-        "butter",
-        " toast"
+        "6 tablespoons panko bread crumbs",
+        " 1 tablespoon grated Parmesan cheese ",
+        " ½ teaspoon lemon pepper",
+        " ½ teaspoon dried thyme",
+        " ½ teaspoon dried parsley",
+        " ⅛ teaspoon granulated garlic",
+        " ⅛ teaspoon lemon zest ",
+        " 2 (4 ounce) salmon fillets",
+        " 1 tablespoon butter, melted"
       ],
       "instructions": [
-        "toast bread",
-        " smother in butter"
+        "Preheat oven to 375 degrees F (190 degrees C). Line a baking sheet with aluminum foil.",
+        " Combine panko bread crumbs, Parmesan cheese, lemon pepper, thyme, parsley, granulated garlic, and lemon zest in a bowl. Arrange salmon on the prepared baking sheet and brush with melted butter. Sprinkle bread crumb mixture evenly over salmon fillets.",
+        " Bake in the preheated oven until salmon flakes easily with a fork, 20 to 25 minutes."
       ],
-      "id": 4
+      "id": 7
     },
     {
-      "name": "Bread and Oil",
-      "type": "appetizers",
+      "name": "Herbed Spaghetti Squash",
+      "type": "sides",
+      "imgurl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9202518.jpg&w=1200&h=678&c=sc&poi=face&q=60&orient=true",
       "ingredients": [
-        "bread",
-        " olive oil",
-        " balsamic vinegar"
+        "1 small spaghetti squash, halved and seeded",
+        " 2 ½ tablespoons butter ",
+        " ½ tablespoon chopped fresh chervil",
+        " ½ tablespoon chopped fresh basil",
+        " ½ tablespoon chopped fresh parsley",
+        " ½ tablespoon chopped fresh sage",
+        " ½ tablespoon chopped fresh chives",
+        " ½ teaspoon salt",
+        " ⅛ teaspoon freshly ground black pepper"
       ],
       "instructions": [
-        "pour balsamic vinegar into dish of olive oil",
-        " sprinkle salt onto mixture",
-        " dip bread into mixture"
+        "Preheat the oven to 375 degrees F (190 degrees C).",
+        " Place spaghetti squash halves cut-sides down in a baking dish and add enough water to come 1/2-inch up the sides of the baking dish. Cover with aluminum foil.",
+        " Bake in the preheated oven until the squash can easily be pierced with a sharp knife, about 45 minutes. Turn squash over, cover with foil again, and continue to cook until the squash is very tender, about 15 more minutes. Remove from the oven, uncover, and allow to cool slightly. Using a fork, gently pull the strands of squash away from the peel and place into a bowl.",
+        " Melt butter in a skillet over medium heat. Add spaghetti squash strands, chervil, basil, parsley, sage, chives, salt, and pepper and cook until flavors are combined and heated through, 2 to 3 minutes."
       ],
-      "id": 5
+      "id": 8
+    },
+    {
+      "name": "Baked Kale Chips",
+      "type": "appetizers",
+      "imgurl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9443934.jpg&w=1200&h=678&c=sc&poi=face&q=60&orient=true",
+      "ingredients": [
+        "1 bunch kale",
+        " 1 tablespoon olive oil",
+        " 1 teaspoon flaked sea salt"
+      ],
+      "instructions": [
+        "Preheat an oven to 300 degrees F (150 degrees C). Line a rimmed baking sheet with parchment paper.",
+        " With a knife or kitchen shears carefully remove kale leaves from the thick stems and tear into bite size pieces. Wash and thoroughly dry kale with a salad spinner. Drizzle kale leaves with olive oil and toss to combine. Spread out in an even layer on the baking sheet without overlapping and sprinkle with salt.",
+        " Bake until the edges start to brown but are not burnt, 20 to 30 minutes."
+      ],
+      "id": 9
     }
   ]
 }

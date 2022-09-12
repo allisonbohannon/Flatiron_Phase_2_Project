@@ -22,8 +22,8 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
         name:name,
         recipeType:type,
         imgurl:imgurl,
-        ingredients:ingredients.join(", "),
-        instructions:instructions.join(", ")
+        ingredients:ingredients.join("; "),
+        instructions:instructions.join("; ")
     })
 
     function handleChange(e) {
@@ -41,13 +41,15 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
             name:formData.name,
             type:formData.recipeType,
             imgurl:formData.imgurl,
-            ingredients:formData.ingredients.split(", "),
-            instructions:formData.instructions.split(", "),
+            ingredients:formData.ingredients.split("; "),
+            instructions:formData.instructions.split("; "),
         }
-        fetch(`${process.env.REACT_APP_API_URL}/recipes/${id}`, { method: "PATCH", 
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newRecipeObj)
-         })
+
+        fetch(`${process.env.REACT_APP_API_URL}/recipes/${id}`, { 
+            method: "PATCH", 
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newRecipeObj)
+             })
          .then(response => response.json())
          .then(data => handleEdit(data))
 
@@ -85,14 +87,14 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
                         name="ingredients"
                         onChange={handleChange} 
                         value={formData.ingredients}/> 
-                <p><em>Separate ingredients with a ","</em></p>
+                <p><em>Separate ingredients with a ";"</em></p>
                 <br></br>
                 <Form.Control as="textarea" 
                         rows={5} 
                         name="instructions"
                         onChange={handleChange} 
                         value={formData.instructions}/>
-                <p><em>Separate instructions with a ","</em></p>      
+                <p><em>Separate instructions with a ";"</em></p>      
                 <br></br>
               
                 <Button type="submit">Submit</Button>

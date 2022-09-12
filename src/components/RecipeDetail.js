@@ -15,7 +15,7 @@ function RecipeDetail({ recipeList, handleDelete }) {
     })
 
 
-    const { name, type, ingredients, instructions, id } = recipe
+    const { name, type, ingredients, instructions, id, imgurl } = recipe
 
 
     const displayIngredients = ingredients.map(ingredient => {
@@ -30,7 +30,7 @@ function RecipeDetail({ recipeList, handleDelete }) {
         fetch(`${process.env.REACT_APP_API_URL}/recipes/${id}`, {method: 'DELETE'})
         .then(response => response.json())
         .then(handleDelete(id))
-        navigate(-1);
+        navigate(`../${type}`);
     }
 
     function handleEditRecipe() {
@@ -41,8 +41,9 @@ function RecipeDetail({ recipeList, handleDelete }) {
 
     return(
         <Card style={{padding:"1rem", width:'45rem'}}>
-            <Card.Title>{name}</Card.Title>
+            <Card.Img src={imgurl}/>
             <Card.Body>
+                <Card.Title>{name}</Card.Title>
                 <Card.Text>Ingredients</Card.Text>
                 <ul>{displayIngredients}</ul>
                 <Card.Text>Instructions</Card.Text>
