@@ -1,14 +1,27 @@
-import React from "react";
-import RecipeContainer from "./RecipeContainer";
+import React, { useState } from "react";
+import RandomRecipes from "./RandomRecipes";
+import Button from "react-bootstrap/esm/Button";
+import Container from "react-bootstrap/esm/Container";
 
-function Home({ recipeList }) {
+
+
+function Home({ recipeList, setMatch, setRecipeId, }) {
+
+    const [toggle, setToggle] = useState(false); 
+
+    function handleClick() {
+        setToggle(toggle => !toggle)
+    }
+
  
     return (
-        <div>
-            Why don't you make something yummy
-            <RecipeContainer recipeList={recipeList} />
-         
-        </div>
+        <Container className='justify-content-center'>
+            <Button onClick={handleClick}
+                style={{margin: '2em'}}
+                
+                >Need ideas? </Button>
+            {toggle? <RandomRecipes recipeList={recipeList} setMatch={setMatch} setRecipeId={setRecipeId}/> : ""}
+        </Container>
     )
 }
 

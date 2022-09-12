@@ -16,12 +16,12 @@ function App() {
   const [match, setMatch] = useState({})
   const [recipeId, setRecipeId] = useState(''); 
 
-
   useEffect(() => {
-      fetch(`${process.env.REACT_APP_API_URL}/recipes`)
-          .then(resp => resp.json())
-          .then(data => setRecipeList(data))
-  }, [])
+    fetch(`${process.env.REACT_APP_API_URL}/recipes`)
+        .then(resp => resp.json())
+        .then(data => setRecipeList(data))
+}, [])
+
 
   function onAdd(obj) {
     setRecipeList([...recipeList, obj])
@@ -91,7 +91,11 @@ function App() {
             recipeId={recipeId}
             handleEdit={onEdit}
             />}/>
-          <Route path="/" element={<Home recipeList={recipeList}/>} />
+          <Route path="/" element={<Home recipeList={recipeList}
+             setMatch={setMatch}
+             setRecipeId={setRecipeId}
+             setRecipeList={setRecipeList}
+          />} />
       </Routes>
     </div>
   );
