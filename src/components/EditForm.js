@@ -14,13 +14,14 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
         return recipe.id === recipeId
     })
 
-    const { name, type, ingredients, instructions, id } = recipe
+    const { name, type, ingredients, instructions, id, imgurl } = recipe
 
 
 
     const [formData, setFormData] = useState({
         name:name,
         recipeType:type,
+        imgurl:imgurl,
         ingredients:ingredients.join(", "),
         instructions:instructions.join(", ")
     })
@@ -39,6 +40,7 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
         const newRecipeObj= {
             name:formData.name,
             type:formData.recipeType,
+            imgurl:formData.imgurl,
             ingredients:formData.ingredients.split(", "),
             instructions:formData.instructions.split(", "),
         }
@@ -61,6 +63,13 @@ function EditForm({ handleEdit, recipeList, recipeId }) {
                         value={formData.name}>
                 </Form.Control> 
                         <br></br>
+
+                <Form.Control type="text" 
+                        name="imgurl"
+                        onChange={handleChange} 
+                        value={formData.imgurl}>
+                </Form.Control> 
+                    <br></br>
                 <Form.Select 
                         name="recipeType"
                         onChange={handleChange} 

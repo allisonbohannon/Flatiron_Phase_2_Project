@@ -8,11 +8,12 @@ import Navbar from 'react-bootstrap/Navbar';
 function NavigationBar() {
   return (
     <Navbar  bg="light">
-        <Nav >
+        <Nav defaultActiveKey="home">
           <Nav.Item>
             <Nav.Link 
               as={Link}
               to="/"
+              eventKey="home"
             >
               Home
             </Nav.Link>
@@ -21,6 +22,7 @@ function NavigationBar() {
             <Nav.Link
               as={Link}
               to="/appetizers"
+              eventKey="appetizers"
             >
               Appetizers
             </Nav.Link>
@@ -29,6 +31,7 @@ function NavigationBar() {
             <Nav.Link
               as={Link}
               to="/sides"
+              eventKey="sides"
             >
               Sides
             </Nav.Link>
@@ -37,6 +40,7 @@ function NavigationBar() {
             <Nav.Link
               as={Link}
               to="/mains"
+              eventKey="mains"
             >
               Mains
             </Nav.Link>
@@ -45,6 +49,7 @@ function NavigationBar() {
             <Nav.Link
               as={Link}
               to="/desserts"
+              eventKey="desserts"
             >
               Desserts
             </Nav.Link>
@@ -53,6 +58,7 @@ function NavigationBar() {
             <Nav.Link
               as={Link}
               to="/addnew"
+              eventKey="addnew"
             >
               Add Something New!
             </Nav.Link>

@@ -2,6 +2,7 @@ import React from "react";
 import { useParams} from "react-router"
 import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
 
 function RecipeDetail({ recipeList, handleDelete }) {
 
@@ -39,17 +40,27 @@ function RecipeDetail({ recipeList, handleDelete }) {
     
 
     return(
-        <div>
-            <h2>{name}</h2>
-            <p>Ingredients</p>
-            <ul>{displayIngredients}</ul>
-            <p>Instructions</p>
-            <ol>{displayInstructions}</ol>
+        <Card style={{padding:"1rem", width:'45rem'}}>
+            <Card.Title>{name}</Card.Title>
+            <Card.Body>
+                <Card.Text>Ingredients</Card.Text>
+                <ul>{displayIngredients}</ul>
+                <Card.Text>Instructions</Card.Text>
+                <ol>{displayInstructions}</ol>
+            </Card.Body>
+           
             <span>
-                <Button onClick={handleEditRecipe}>Edit</Button>
-                <Button onClick={handleDeleteRecipe}>Delete</Button>
+                <Button onClick={handleEditRecipe}
+                        style={{margin: '2rem'}}
+                        >
+                     Edit
+                </Button>
+                <Button onClick={handleDeleteRecipe}
+                        style={{margin: '2rem'}}
+                        >Delete
+                </Button>
             </span>
-        </div>
+        </Card>
     )
 }
 

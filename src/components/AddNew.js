@@ -8,6 +8,7 @@ function AddNew({ handleAdd }) {
     const [formData, setFormData] = useState({
         name:"",
         recipeType:"appetizers",
+        imgurl:"",
         ingredients:"",
         instructions:""
     })
@@ -26,6 +27,7 @@ function AddNew({ handleAdd }) {
         const newRecipeObj= {
             name:formData.name,
             type:formData.recipeType,
+            imgurl:formData.imgurl,
             ingredients:formData.ingredients.split(", "),
             instructions:formData.instructions.split(", "),
         }
@@ -39,6 +41,7 @@ function AddNew({ handleAdd }) {
       setFormData({
         name:"",
         recipeType:"",
+        imgurl:"",
         ingredients:"",
         instructions:""
       })
@@ -53,6 +56,13 @@ function AddNew({ handleAdd }) {
                         placeholder="recipe name" 
                         onChange={handleChange} 
                         value={formData.name}>
+                </Form.Control> 
+                        <br></br>
+                <Form.Control type="text" 
+                        name="imgurl" 
+                        placeholder="photo link" 
+                        onChange={handleChange} 
+                        value={formData.imgurl}>
                 </Form.Control> 
                         <br></br>
                 <Form.Select 
