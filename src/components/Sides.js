@@ -4,7 +4,6 @@ import RecipeContainer from "./RecipeContainer";
 function Sides({recipeList, setMatch, setRecipeId}) {
     return (
         <div>
-            Sides
             <RecipeContainer recipeList={recipeList} setMatch={setMatch} setRecipeId={setRecipeId} />
         </div>
     )
